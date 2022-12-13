@@ -33,6 +33,9 @@ emission_on_uv2 = false
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ground" type="StaticBody" parent="."]
 
@@ -45,9 +48,10 @@ material/0 = SubResource( 2 )
 [node name="CollisionShape" type="CollisionShape" parent="ground"]
 shape = SubResource( 6 )
 
-[node name="Camera" type="Camera" parent="."]
+[node name="campivote" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="campivote"]
 transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 20, 80 )
-visible = false
 current = true
 fov = 56.3
 near = 0.01
