@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=2]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -2109,69 +2110,73 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="block" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 2.44591 )
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 15.1811 )
 
 [node name="block6" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 8.50509 )
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 21.2403 )
 
 [node name="block7" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 14.5087 )
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 27.2439 )
 
 [node name="block8" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 19.6507 )
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 32.3859 )
 
 [node name="block9" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 25.1735 )
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3443, 0, 37.9087 )
 
 [node name="block2" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.312, 0, -7.72684 )
-visible = false
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.312, 0, 5.00834 )
 
 [node name="block3" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.26, 0, -7.72684 )
-visible = false
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.26, 0, 5.00834 )
 
 [node name="block4" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.1524, 0, -7.72684 )
-visible = false
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.1524, 0, 5.00834 )
 
 [node name="block5" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.9892, 0, -7.72684 )
-visible = false
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.9892, 0, 5.00834 )
 
 [node name="block14" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.63089, 0, 28.4103 )
-visible = false
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.63089, 0, 41.1455 )
 
 [node name="block15" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.31711, 0, 28.4103 )
-visible = false
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.31711, 0, 41.1455 )
 
 [node name="block16" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.20952, 0, 28.4103 )
-visible = false
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.20952, 0, 41.1455 )
 
 [node name="block17" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.0464, 0, 28.4103 )
-visible = false
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.0464, 0, 41.1455 )
 
 [node name="block10" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.02819, 0, -1.23271 )
-visible = false
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.02819, 0, 11.5025 )
 
 [node name="block11" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0801964, 0, -1.23271 )
-visible = false
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0801964, 0, 11.5025 )
 
 [node name="block12" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.81222, 0, -1.23271 )
-visible = false
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.81222, 0, 11.5025 )
 
 [node name="block13" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.649, 0, -1.23271 )
-visible = false
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.649, 0, 11.5025 )
+
+[node name="Coin" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.1952, 0, -5.55142 )
+
+[node name="Coin2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2692, 0, -16.9942 )
+
+[node name="Coin3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15259, 0, -16.541 )
+
+[node name="Coin4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3583, 0, -21.186 )
+
+[node name="Coin5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.8311, 0, -34.2149 )
+
+[node name="Coin6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.12482, 0, -44.4855 )
+
+[node name="Coin7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.1076, 0, -26.5119 )

@@ -20,4 +20,4 @@ shape = SubResource( 1 )
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="pivote"]
-transform = Transform( -1, 6.18172e-08, -6.18172e-08, 2.11761e-08, 0.857329, 0.514769, 8.48193e-08, 0.514769, -0.857329, 0, 6, -0.360367 )
+transform = Transform( -1, -6.18172e-08, 6.18172e-08, 0, 0.707107, 0.707107, -8.74228e-08, 0.707107, -0.707107, 0, 7.02016, 0.360687 )

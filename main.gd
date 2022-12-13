@@ -11,6 +11,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _input(event):
+	#print("input")
 	if Input.is_action_pressed("startgame"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		$Camera.current=false
