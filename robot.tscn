@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/3DGodotRobot.glb" type="PackedScene" id=1]
+[ext_resource path="res://robot.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=6]
+
+[node name="robot" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60504, 0.477432 )
+script = ExtResource( 2 )
+
+[node name="3DGodotRobot" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.56297, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.267645, 0.0332041 )
+shape = SubResource( 6 )
