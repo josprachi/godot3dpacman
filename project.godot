@@ -61,6 +61,13 @@ leavegame={
  ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="Stage"
+3d_physics/layer_2="player"
+3d_physics/layer_3="enemy"
+3d_physics/layer_4="coin"
+
 [physics]
 
 common/enable_pause_aware_picking=true

@@ -1,7 +1,7 @@
 extends KinematicBody
 
 # How fast the player moves in meters per second.
-export var speed = 5
+export var speed = 15
 export var jump_impulse = 20
 
 # The downward acceleration when in the air, in meters per second squared.
@@ -50,3 +50,11 @@ func _physics_process(delta):
 	velocity.z = expectedVelocity.z 
 	velocity.y -= fall_acceleration * delta
 	velocity = move_and_slide(velocity, Vector3.UP)
+	for index in range(get_slide_count()):
+		var collision= get_slide_collision(index)
+		if collision.collider.is_in_group("Enemies"):
+			#print("enemy")
+			#collision.collider.hide()
+			collision.collider.getAngry()
+		#collider.
+			

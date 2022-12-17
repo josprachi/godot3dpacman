@@ -12,7 +12,7 @@ albedo_color = Color( 0.0392157, 0.690196, 0.635294, 1 )
 
 [node name="map" type="Spatial"]
 
-[node name="wall" type="StaticBody" parent="."]
+[node name="wall" type="StaticBody" parent="." groups=["stage"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.1165, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wall"]
@@ -22,7 +22,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="wall2" type="StaticBody" parent="."]
+[node name="wall2" type="StaticBody" parent="." groups=["stage"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.0382, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wall2"]
@@ -32,7 +32,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="wall3" type="StaticBody" parent="."]
+[node name="wall3" type="StaticBody" parent="." groups=["stage"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9171, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wall3"]
@@ -42,7 +42,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="wall4" type="StaticBody" parent="."]
+[node name="wall4" type="StaticBody" parent="." groups=["stage"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.796, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wall4"]
@@ -52,7 +52,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="wall5" type="StaticBody" parent="."]
+[node name="wall5" type="StaticBody" parent="." groups=["stage"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6348, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wall5"]
@@ -2099,7 +2099,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="wall36" type="StaticBody" parent="."]
+[node name="wall36" type="StaticBody" parent="." groups=["stage"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.4978, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wall36"]
