@@ -15,21 +15,36 @@ func _process(delta):
 func get_input():
 	# We create a local variable to store the input direction.
 	var direction = Vector3.ZERO
-	# We check for each move input and update the direction accordingly.
-	if Input.is_action_pressed("moveright"):
-		direction.x += 1		
-	if Input.is_action_pressed("moveleft"):
-		direction.x -= 1
+	if Input.get_mouse_mode()==Input.MOUSE_MODE_CAPTURED:
+		var iputdir=Vector3.ZERO
+		if Input.is_action_pressed("moveright"):
+			iputdir.x -= 1		
+		if Input.is_action_pressed("moveleft"):
+			iputdir.x+= 1
+		if Input.is_action_pressed("movedown"):      
+			iputdir.z -= 1
+		if Input.is_action_pressed("moveup"):
+			iputdir.z += 1
 		
-		#translate_object_local(-transform.basis.x)
-	if Input.is_action_pressed("movedown"):      
-		direction.z += 1
-	if Input.is_action_pressed("moveup"):
-		direction.z -= 1
-	if direction != Vector3.ZERO:
-		direction = direction.normalized()
+		var forw=global_transform.basis.z
+		var right= global_transform.basis.x
+		var relativeDire= (forw*iputdir.z)+(right*iputdir.x)	
+		direction=relativeDire
+		if direction != Vector3.ZERO:
+			direction = direction.normalized()
+	else:			
+		if Input.is_action_pressed("moveright"):
+			direction += Vector3.RIGHT		
+		if Input.is_action_pressed("moveleft"):
+			direction+= Vector3.LEFT
+		if Input.is_action_pressed("movedown"):      
+			direction += Vector3.BACK
+		if Input.is_action_pressed("moveup"):
+			direction += Vector3.FORWARD
+		if direction != Vector3.ZERO:
+			direction = direction.normalized()
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
-		velocity.y += jump_impulse
+		velocity.y += jump_impulse	
 	return direction
 
 func _input(event):
@@ -39,10 +54,9 @@ func _input(event):
 			rotate_y(-lerp(0,0.1,event.relative.x/10))
 		elif event.relative.x<0:
 			rotate_y(-lerp(0,0.1,event.relative.x/10))
-	if event is InputEventMouseMotion and Input.get_mouse_mode()==Input.MOUSE_MODE_CAPTURED:
-		$pivote.rotate_x(-event.relative.y*mouse_Sensitivity)
-		$pivote.rotation.x= clamp($pivote.rotation.x,-1.0,1.0)
-					
+#	if event is InputEventMouseMotion and Input.get_mouse_mode()==Input.MOUSE_MODE_CAPTURED:
+#		rotate_x(-event.relative.y*mouse_Sensitivity)
+#		rotation.x= clamp(rotation.x,-1.0,1.0)					
 				
 func _physics_process(delta):
 	var expectedVelocity= get_input()*speed 

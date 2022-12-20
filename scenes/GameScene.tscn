@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://block.tscn" type="PackedScene" id=1]
-[ext_resource path="res://playerbody.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/playerbody.tscn" type="PackedScene" id=2]
 [ext_resource path="res://seamlessTextures/100_1174_seamless.JPG" type="Texture" id=3]
-[ext_resource path="res://GameScene.gd" type="Script" id=4]
+[ext_resource path="res://scripts/GameScene.gd" type="Script" id=4]
 
 [sub_resource type="PlaneMesh" id=1]
 
