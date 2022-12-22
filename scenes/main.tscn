@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/playerbody.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://sounds/POL-snowy-hill-short.wav" type="AudioStream" id=5]
 [ext_resource path="res://sounds/sfx_sounds_fanfare1.wav" type="AudioStream" id=6]
+[ext_resource path="res://Instructions.tscn" type="PackedScene" id=7]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 4, 4 )
@@ -125,5 +126,7 @@ autoplay = true
 
 [node name="powerupTimer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="Instructions" parent="." instance=ExtResource( 7 )]
 
 [connection signal="timeout" from="powerupTimer" to="." method="_on_powerupTimer_timeout"]

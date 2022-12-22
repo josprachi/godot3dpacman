@@ -7,6 +7,7 @@ export var jump_impulse = 20
 # The downward acceleration when in the air, in meters per second squared.
 export var fall_acceleration = 75
 
+var lifevalue=500
 var velocity = Vector3.ZERO
 var mouseDelta= Vector2()
 var mouse_Sensitivity=0.002
@@ -48,6 +49,7 @@ func get_input():
 	return direction
 
 func _input(event):
+	
 	if event is InputEventMouseMotion:
 		mouseDelta=event.relative
 		if event.relative.x>0:
@@ -59,16 +61,24 @@ func _input(event):
 #		rotation.x= clamp(rotation.x,-1.0,1.0)					
 				
 func _physics_process(delta):
-	var expectedVelocity= get_input()*speed 
-	velocity.x = expectedVelocity.x
-	velocity.z = expectedVelocity.z 
-	velocity.y -= fall_acceleration * delta
-	velocity = move_and_slide(velocity, Vector3.UP)
-	for index in range(get_slide_count()):
-		var collision= get_slide_collision(index)
-		if collision.collider.is_in_group("Enemies"):
-			#print("enemy")
-			#collision.collider.hide()
-			collision.collider.getAngry()
-		#collider.
-			
+	if lifevalue>0:
+		var expectedVelocity= get_input()*speed 
+		velocity.x = expectedVelocity.x
+		velocity.z = expectedVelocity.z 
+		velocity.y -= fall_acceleration * delta
+		velocity = move_and_slide(velocity, Vector3.UP)
+		for index in range(get_slide_count()):
+			var collision= get_slide_collision(index)
+			if collision.collider.is_in_group("Enemies"):
+				#print("enemy")
+				#collision.collider.hide()
+				collision.collider.getAngry()
+				
+				if collision.collider.isscred:
+					collision.collider.hide()
+				else:
+					lifevalue-=1
+			#collider.
+	else:
+		get_parent().gameover=true
+		get_parent().showInstructions()		

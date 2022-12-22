@@ -68,6 +68,14 @@ leavegame={
 3d_physics/layer_3="enemy"
 3d_physics/layer_4="coin"
 
+[locale]
+
+fallback="hi"
+translations=PoolStringArray( "res://fonts/l10n.en.translation", "res://fonts/l10n.hi.translation" )
+translation_remaps={
+"res://fonts/enfont.tres": PoolStringArray( "res://fonts/hinfont.tres:en" )
+}
+
 [physics]
 
 common/enable_pause_aware_picking=true

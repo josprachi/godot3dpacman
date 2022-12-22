@@ -1473,6 +1473,7 @@ isSpecial = true
 
 [node name="Coin4" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3583, 0, -21.186 )
+isSpecial = true
 
 [node name="Coin5" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.8311, 0, -34.2149 )

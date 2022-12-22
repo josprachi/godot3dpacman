@@ -9,8 +9,10 @@ var direction =1
 var roatated=false
 var velocity =Vector3.ZERO
 var playerTarget=null
+var isscred=false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	isscred=false
 	$AnimationPlayer.stop()
 	rotate_y(rand_range(-PI/4,PI/4))
 	pass # Replace with function body.
@@ -26,6 +28,10 @@ func getAngry():
 	$AnimationPlayer.play("getAngry")
 	yield($AnimationPlayer,"animation_finished")
 	$AnimationPlayer.play("attack")
+	
+	
+func scareenemy(value):
+	self.isscred=value	
 func _physics_process(delta):
 	
 	#if playerTarget:

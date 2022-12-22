@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://fonts/l10n.en.translation", "res://fonts/l10n.mr.translation", "res://fonts/l10n.hi.translation" ]
+
+source_file="res://fonts/l10n.csv"
+dest_files=[ "res://fonts/l10n.en.translation", "res://fonts/l10n.mr.translation", "res://fonts/l10n.hi.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

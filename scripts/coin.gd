@@ -31,13 +31,18 @@ func _ready():
 
 func _on_Coin_body_entered(body):	
 	$AnimationPlayer.stop()
-	#$CPUParticles.restart()
-	
-	#$AnimationPlayer.play("collected")
-	#yield($AnimationPlayer,"animation_finished")
-	#if self.isSpecial:
+	if $MeshInstance.visible==true:
+		if isSpecial:
+			mainParent.score+=5
+			mainParent.startEnemyTimer()
+		
+		else:
+			mainParent.score+=1
+
+	mainParent.setsfx(self.isSpecial)
 	if sfxplayer.playing==false:
 		sfxplayer.play()
-		#print(get_parent().get_parent().name)
+	
 	$MeshInstance.hide()
+	
 	pass # Replace with function body.

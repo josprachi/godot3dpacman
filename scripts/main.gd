@@ -5,9 +5,11 @@ extends Node
 # var a = 2
 # var b = "text"
 
-
+var score =0
+var gameover=false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	TranslationServer.set_locale("en")
 	for enem in get_tree().get_nodes_in_group("Enemies"):
 		enem.setTarget($playerbody)
 		#$sfxplayer.stream=load("res://sounds/sfx_coin_cluster1.wav")
@@ -30,10 +32,21 @@ func _input(event):
 		$playerbody/pivote/Camera.current=false	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
+func _process(delta):
+	$Instructions.updateScore(self.score)
+	$Instructions/lifevalue.text="lifevalue: "+ str($playerbody.lifevalue)
 #	pass
 
-
+func startEnemyTimer():
+	$powerupTimer.start()	
+	for enem in get_tree().get_nodes_in_group("Enemies"):
+		enem.scareenemy(true)
+	#for enem i
+func showInstructions():
+	if gameover==true:
+		$Instructions/Panel.show()
 func _on_powerupTimer_timeout():
-	print("powerup play music")
+	#print("powerup play music")
+	for enem in get_tree().get_nodes_in_group("Enemies"):
+		enem.scareenemy(false)
 	pass # Replace with function body.
